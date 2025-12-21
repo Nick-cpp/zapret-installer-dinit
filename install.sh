@@ -16,7 +16,7 @@ if [[ "$autostart_choice" =~ ^[Yy]$ ]]; then
 type            = process
 command         = /bin/bash $HOME_DIR/.zapret/main_script.sh -nointeractive
 smooth-recovery = true
-depends-on      = NetworkManager
+depends-on      = network.target
 EOF
     
     sudo cp /tmp/zapret-service /etc/dinit.d/zapret
